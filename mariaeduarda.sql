@@ -23,6 +23,8 @@ CREATE TABLE consultas (
     id_paciente INT NOT NULL
     data_consulta DATE NOT NULL,
     horario_consulta TIME NOT NULL
+    CONSTRAINT fk_paciente FOREIGN KEY (id_paciente) REFERENCES pacientes(id_paciente),
+    CONSTRAINT fk_medico FOREIGN KEY (id_medico) REFERENCES medicos(id_medico)
 );
 
 
